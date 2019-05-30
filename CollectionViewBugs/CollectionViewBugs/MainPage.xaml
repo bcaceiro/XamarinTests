@@ -4,7 +4,7 @@
         <!-- Place new controls here -->
         <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
         
-        <Button Text="CollectionViewTest" Clicked="NavigateCollectionView"/>
+        <Button Text="Collection View Bindings" Clicked="NavigateCollectionViewBindings"/>
         
         <Button Text="ListView Test" Clicked="NavigateList"/>
         

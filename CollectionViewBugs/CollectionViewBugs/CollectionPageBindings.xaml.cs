@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace CollectionViewBugs
 {
-    public partial class CollectionPage : ContentPage
+    public partial class CollectionPageBindings : ContentPage
     {
-        public CollectionPage()
+        public CollectionPageBindings()
         {
             InitializeComponent();
 

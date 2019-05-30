@@ -24,9 +24,9 @@ namespace CollectionViewBugs
             Navigation.PushAsync(new MyListviewPage());
         }
 
-        void NavigateCollectionView(object sender, EventArgs e)
+        void NavigateCollectionViewBindings(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new CollectionPage());
+            Navigation.PushAsync(new CollectionPageBindings());
         }
     }
 
