@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="CollectionViewBugs.MyListviewPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+
+        <ListView CachingStrategy="RecycleElement" RowHeight="140">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>mono</x:String>
+                    <x:String>monodroid</x:String>
+                    <x:String>monotouch</x:String>
+                    <x:String>monorail</x:String>
+                    <x:String>monodevelop</x:String>
+                    <x:String>monotone</x:String>
+                    <x:String>monopoly</x:String>
+                    <x:String>monomodal</x:String>
+                    <x:String>mononucleosis</x:String>
+                </x:Array>
+            </ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame x:Name="productMainFrame"
+                               Margin="7"
+                               Padding="2"
+                               BackgroundColor="#FF444444"
+                               CornerRadius="5">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <!--                <ffimageloading:CachedImage WidthRequest="90"
+                                            HeightRequest="90"
+                                            CacheDuration="10"
+                                            DownsampleToViewSize="true"
+                                            ErrorPlaceholder="img_default.png"
+                                            RetryCount="0"
+                                            Source="{Binding ImageUrlConverted}"
+                                            HorizontalOptions="Center"
+                                            VerticalOptions="Center">
+                    <ffimageloading:CachedImage.Transformations>
+                        <fftransformations:CircleTransformation />
+                    </ffimageloading:CachedImage.Transformations>
+                </ffimageloading:CachedImage>-->
+
+                                <Grid Grid.Column="1" Margin="3,5,0,0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="40" />
+                                    </Grid.RowDefinitions>
+
+                                    <Label FontSize="16"
+                                           LineBreakMode="NoWrap"
+                                           Text="My label 12345 "
+                                           TextColor="White" />
+
+                                    <Label Grid.Row="1"
+                                           FontSize="13"
+                                           LineBreakMode="NoWrap"
+                                           Opacity="0.5"
+                                           Text="Description Label 1234"
+                                           TextColor="White" />
+
+                                    <Grid Grid.Row="2" ColumnSpacing="5">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="70" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="80" />
+                                        </Grid.ColumnDefinitions>
+
+
+
+                                        <Label Margin="0,0,0,10"
+                                               Opacity="0.5"
+                                               VerticalOptions="Center">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span FontSize="13"
+                                                          Text="1"
+                                                          TextColor="White" />
+                                                    <Span FontSize="13"
+                                                          Text=" "
+                                                          TextColor="White" />
+                                                    <Span FontSize="13"
+                                                          Text="piece"
+                                                          TextColor="White" />
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+
+                                        <Frame Grid.Column="2"
+                                               Margin="0,0,10,10"
+                                               Padding="1"
+                                               WidthRequest="75"
+                                               HeightRequest="34"
+                                               BackgroundColor="Transparent"
+                                               CornerRadius="10"
+                                               OutlineColor="#FFF55131"
+                                               HorizontalOptions="End"
+                                               VerticalOptions="Center">
+                                            <Label x:Name="priceLabel"
+                                                   Text="14.45€"
+                                                   FontSize="13"
+                                                   TextColor="White"
+                                                   HorizontalOptions="Center"
+                                                   VerticalOptions="Center" />
+
+                                        </Frame>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Frame>
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </ContentPage.Content>
+</ContentPage>
