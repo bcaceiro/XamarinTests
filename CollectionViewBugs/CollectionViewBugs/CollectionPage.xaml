@@ -6,48 +6,19 @@
 
 
     <!--aaa-->
-    
-        
-        
-        
-        
+
+
+
+
+
         <CollectionView x:Name="listviewtables"
                         Margin="5,0,5,5"
-                        
                         SelectionMode="Single">
-            <CollectionView.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Baboon</x:String>
-                    <x:String>Capuchin Monkey</x:String>
-                    <x:String>Blue Monkey</x:String>
-                    <x:String>Squirrel Monkey</x:String>
-                    <x:String>Squirrel Monkey</x:String>
-                    <x:String>Squirrel Monkey</x:String>
-                    <x:String>Squirrel Monkey</x:String>
-                    <x:String>Squirrel Monkey</x:String>
-                    <x:String>Squirrel Monkey</x:String>
-                    <x:String>Squirrel Monkey</x:String>
-                    <x:String>Squirrel Monkey</x:String>
-                    <x:String>Squirrel Monkey</x:String>
-                    <x:String>Squirrel Monkey</x:String>
-                    <x:String>Squirrel Monkey</x:String>
-                    <x:String>Squirrel Monkey</x:String>
-                    <x:String>Squirrel Monkey</x:String>
-                    <x:String>Squirrel Monkey</x:String>
-                    <x:String>Squirrel Monkey</x:String>
-                    <x:String>Squirrel Monkey</x:String>
-                    <x:String>Squirrel Monkey</x:String>
-                    <x:String>Golden Lion Tamarin</x:String>
-                    <x:String>Howler Monkey</x:String>
-                    <x:String>Japanese Macaque</x:String>
-                </x:Array>
-            </CollectionView.ItemsSource>
             <CollectionView.ItemsLayout>
                 <GridItemsLayout Orientation="Vertical" Span="3" />
             </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <ContentView Padding="5">
                     <Frame 
                            Padding="2"
                            BackgroundColor="Gray"
@@ -80,7 +51,7 @@
                                    Margin="2,0,0,0"
                                    FontSize="27"
                                    LineBreakMode="NoWrap"
-                                   Text="3"
+                                   Text="{Binding Number}"
                                    TextColor="White"
                                    HorizontalOptions="Center"
                                    VerticalOptions="Center" />
@@ -106,11 +77,8 @@
                                        VerticalOptions="Center" />
 
                             </Frame>
-
-
                         </Grid>
                     </Frame>
-                        </ContentView>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>

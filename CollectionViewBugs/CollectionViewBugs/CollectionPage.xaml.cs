@@ -10,6 +10,14 @@ namespace CollectionViewBugs
         public CollectionPage()
         {
             InitializeComponent();
+
+            var list = new List<Tables>();
+            for (int i = 0; i< 100; i++)
+            {
+                list.Add(new Tables { Number = i });
+            }
+
+            listviewtables.ItemsSource = list;
         }
     }
 }
